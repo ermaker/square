@@ -54,5 +54,7 @@ group :development do
   gem 'guard'
   gem 'guard-rubocop'
   gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'guard-spring'
   gem 'pry-rails'
 end
