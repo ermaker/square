@@ -43,10 +43,13 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
   gem 'rubocop', require: false
 end
 
 group :development do
   gem 'guard'
   gem 'guard-rubocop'
+  gem 'guard-rspec'
 end
