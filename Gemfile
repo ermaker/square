@@ -43,6 +43,11 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  gem 'rubocop', require: false
+end
+
 group :development do
   gem 'guard'
+  gem 'guard-rubocop'
 end
