@@ -1,0 +1,8 @@
+square:
+  build: .
+  env_file: .env
+  environment:
+    - PORT=80
+  ports:
+    - '80:80'
+  restart: always
