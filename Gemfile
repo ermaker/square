@@ -42,6 +42,11 @@ group :development do
   gem 'spring'
 end
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'foreman'
+gem 'puma'
+gem 'rails_12factor'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
