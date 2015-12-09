@@ -50,6 +50,11 @@ gem 'puma'
 gem 'rails_12factor'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'activeadmin', '>= 1.0.0.pre2'
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 
 group :development, :test do
   gem 'rspec-rails'
