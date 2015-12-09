@@ -52,6 +52,7 @@ gem 'rails_12factor'
 group :development, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
+  gem 'rails_best_practices'
   gem 'rubocop', require: false
 end
 
@@ -61,5 +62,6 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'guard-spring'
+  gem 'guard-rails_best_practices', github: 'logankoester/guard-rails_best_practices'
   gem 'pry-rails'
 end

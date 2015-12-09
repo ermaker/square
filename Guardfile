@@ -27,7 +27,7 @@ guard :bundler do
   files.each { |file| watch(helper.real_path(file)) }
 end
 
-guard 'spring', bundler: true do
+guard :spring, bundler: true do
   watch('Gemfile.lock')
   watch(%r{^config/})
   watch(%r{^spec/(support|factories)/})
@@ -91,4 +91,8 @@ guard :rspec, cmd: 'bin/rspec' do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
     Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance'
   end
+end
+
+guard :rails_best_practices do
+  watch(%r{^app/(.+)\.rb$})
 end
