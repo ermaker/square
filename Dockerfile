@@ -6,7 +6,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
-RUN bundle install --without development test
+RUN bundle install -r 3 -j 4 --without development test
 
 # Setup
 COPY . /usr/src/app
