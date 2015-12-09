@@ -36,6 +36,10 @@ end
 
 guard :rubocop do
   watch(/.+\.rb$/)
+  watch(/Gemfile$/)
+  watch(/Guardfile$/)
+  watch(/Rakefile$/)
+  watch(/config.ru$/)
   watch(/Vagrantfile$/)
   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
 end
