@@ -1,4 +1,4 @@
-class AddDeviseToUsers < ActiveRecord::Migration
+class DeviseCreateUsers < ActiveRecord::Migration
   def self.up
     create_table(:users) do |t|
       ## Database authenticatable
@@ -30,9 +30,7 @@ class AddDeviseToUsers < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
-      # Uncomment below if timestamps were not included in your original model.
-      # t.timestamps null: false
+      t.timestamps null: false
     end
 
     add_index :users, :email,                unique: true
