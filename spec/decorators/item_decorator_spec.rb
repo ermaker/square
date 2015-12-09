@@ -1,4 +1,2 @@
-require 'spec_helper'
-
-describe ItemDecorator do
+RSpec.describe ItemDecorator do
 end
