@@ -57,6 +57,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'quiet_assets'
   gem 'guard'
   gem 'guard-rubocop'
   gem 'guard-rspec'
