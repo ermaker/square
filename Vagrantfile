@@ -1,5 +1,5 @@
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/trusty64"
+Vagrant.configure('2') do |config|
+  config.vm.box = 'ubuntu/trusty64'
 
   # Install docker
   config.vm.provision :docker
@@ -11,12 +11,13 @@ Vagrant.configure("2") do |config|
       | sudo tee /usr/local/bin/docker-compose > /dev/null
     sudo chmod +x /usr/local/bin/docker-compose
     test -e /etc/bash_completion.d/docker-compose || \\
-    curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose --version | awk 'NR==1{print $NF}')/contrib/completion/bash/docker-compose \\
+    curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose --version \\
+      | awk 'NR==1{print $NF}')/contrib/completion/bash/docker-compose \\
       | sudo tee /etc/bash_completion.d/docker-compose > /dev/null
   EOC
 
-  config.vm.network "public_network"
-  config.vm.network "forwarded_port", guest: 80, host: 80
+  config.vm.network 'public_network'
+  config.vm.network 'forwarded_port', guest: 80, host: 80
 
   config.vm.provision :shell, inline: <<-EOC
     ./mkdirs.sh
@@ -27,7 +28,7 @@ Vagrant.configure("2") do |config|
     docker-compose up -d
   EOC
 
-  config.vm.provider "virtualbox" do |vb|
+  config.vm.provider 'virtualbox' do |vb|
     vb.cpus = 1
     vb.memory = 256
   end

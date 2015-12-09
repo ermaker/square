@@ -36,6 +36,7 @@ end
 
 guard :rubocop do
   watch(/.+\.rb$/)
+  watch(/Vagrantfile$/)
   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
 end
 
