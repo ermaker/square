@@ -15,16 +15,3 @@ Metrics/LineLength:
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
   Max: 15
-
-# Offense count: 6
-# Configuration parameters: Exclude.
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/application_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/models/admin_user.rb'
-    - 'config/application.rb'
-    - 'db/migrate/20151209133845_devise_create_admin_users.rb'
-    - 'db/migrate/20151209133848_create_active_admin_comments.rb'
