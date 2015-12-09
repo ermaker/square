@@ -4,3 +4,4 @@
 /tmp
 /spec/examples.txt
 .env
+/db/schema.rb
