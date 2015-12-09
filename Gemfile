@@ -48,6 +48,8 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'foreman'
 gem 'puma'
 gem 'rails_12factor'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'rspec-rails'
